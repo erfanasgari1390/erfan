@@ -1,4 +1,4 @@
-
+﻿
 using StudentApi.Models;
 using StudentApi.Repositories;
 
@@ -6,7 +6,7 @@ namespace StudentApi.Services
 {
     public partial class StudentService : IStudentService
     {
-        public readonly IStudentRepository _repository;
+        private readonly IStudentRepository _repository;
 
         public StudentService(IStudentRepository repository)
         {

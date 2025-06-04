@@ -1,0 +1,11 @@
+﻿
+using StudentApi.Models;
+
+public interface IStudentRepository
+    {
+        Task<List<Student>> GetAllAsync();
+        Task<Student?> GetByIdAsync(int id);
+        Task AddAsync(Student student);
+        Task DeleteAsync(Student student);
+        Task UpdateAsync(Student student);
+    }
