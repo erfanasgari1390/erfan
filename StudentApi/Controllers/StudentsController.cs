@@ -63,7 +63,7 @@ namespace StudentApi.Services
             return true;
         }
 
-        public async Task<bool> DeleteAsync(int id)
+        async Task<bool> IStudentService.DeleteAsync(int id)
         {
             var existing = await _repository.GetByIdAsync(id);
             if (existing == null) return false;
