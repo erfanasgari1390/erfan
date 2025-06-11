@@ -31,7 +31,7 @@ namespace StudentApi.Migrations
 
                     b.Property<string>("name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(102)");
 
                     b.Property<int>("phone")
                         .HasColumnType("int");
