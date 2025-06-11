@@ -1,6 +1,4 @@
 ﻿
-using StudentApi.Models;
-
 public interface IStudentRepository
     {
         Task<List<Student>> GetAllAsync();

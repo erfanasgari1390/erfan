@@ -1,43 +1,41 @@
 ﻿
-using StudentApi.Models;
 using StudentApi.Repositories;
 
 namespace StudentApi.Services
 {
     public partial class StudentService : IStudentService
     {
-        private readonly IStudentRepository _repository;
-
-        public StudentService(IStudentRepository repository)
+        private readonly IStudentRepository _repositorys;
+        public StudentService (IStudentRepository repository)
         {
             _repository = repository;
         }
 
-        public async Task<List<StudentDto>> GetAllAsync()
+        public async Task<List<StudentDto>> GetAllAsyn()
         {
             var students = await _repository.GetAllAsync();
             return students.Select(s => new StudentDto
             {
-                Id = s.id,
+                Id = s.Id,
                 Name = s.Name,
                 Age = s.Age
             }).ToList();
         }
 
-        public async Task<StudentDto?> GetByIdAsync(int id)
+        public async Task<StudentDto?> GetByIdAsyn(int id)
         {
             var student = await _repository.GetByIdAsync(id);
             if (student == null) return null;
 
             return new StudentDto
             {
-                Id = student.id,
+                Id = student.Id,
                 Name = student.Name,
                 Age = student.Age
             };
         }
 
-        public async Task<StudentDto> CreateAsync(StudentDto dto)
+        public async Task<StudentDto> CreateAsyn(StudentDto dto)
         {
             var student = new Student
             {
@@ -47,11 +45,11 @@ namespace StudentApi.Services
 
             await _repository.AddAsync(student);
 
-            dto.Id = student.id;
+            dto.Id = student.Id;
             return dto;
         }
 
-        public async Task<bool> UpdateAsync(int id, StudentDto dto)
+        public async Task<bool> UpdateAsyn(int id, StudentDto dto)
         {
             var existing = await _repository.GetByIdAsync(id);
             if (existing == null) return false;

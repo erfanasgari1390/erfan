@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using StudentApi.Data;
-using StudentApi.Models;
+
 
 namespace StudentApi.Repositories
 {

@@ -9,7 +9,7 @@ using System.Text;
     [ApiController]
     public class AuthController : ControllerBase
     {
-        private readonly string _key = "your-very-secret-key"; // این باید با مقدار appsettings.json همخوانی داشته باشد.
+        private readonly string _key = "your-very-secret-key"; 
         private readonly string _issuer = "your-issuer";
         private readonly string _audience = "your-audience";
 

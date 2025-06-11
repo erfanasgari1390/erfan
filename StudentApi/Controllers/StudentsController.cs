@@ -1,5 +1,4 @@
 
-using StudentApi.Models;
 using StudentApi.Repositories;
 
 namespace StudentApi.Services
@@ -18,7 +17,7 @@ namespace StudentApi.Services
             var students = await _repository.GetAllAsync();
             return students.Select(s => new StudentDto
             {
-                Id = s.id,
+                Id = s.Id,
                 Name = s.Name,
                 Age = s.Age
             }).ToList();
@@ -31,13 +30,13 @@ namespace StudentApi.Services
 
             return new StudentDto
             {
-                Id = student.id,
+                Id = student.Id,
                 Name = student.Name,
                 Age = student.Age
             };
         }
 
-        public async Task<StudentDto> CreateAsync(StudentDto dto)
+        public async Task<StudentDto> CreateAsync (StudentDto dto)
         {
             var student = new Student
             {
@@ -47,7 +46,7 @@ namespace StudentApi.Services
 
             await _repository.AddAsync(student);
 
-            dto.Id = student.id;
+            dto.Id = student.Id;
             return dto;
         }
 
@@ -71,5 +70,7 @@ namespace StudentApi.Services
             await _repository.DeleteAsync(existing);
             return true;
         }
+
+       
     }
 }
