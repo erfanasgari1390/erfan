@@ -1,9 +1,11 @@
-﻿namespace StudentApi.Category;
+﻿using StudentApi.Product;
 
-public class Category
+namespace StudentApi.Category;
+
+public class category
 {
     public int Id { get; set; }
     public string Name { get; set; }
 
-    public ICollection<Product> Products { get; set; } = new List<Product>(); 
+    public ICollection<product> Products { get; set; } = new List<product>(); 
 }

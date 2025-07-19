@@ -1,14 +1,18 @@
-﻿namespace StudentApi.CartItem;
+﻿using StudentApi.Product;
+using StudentApi.User;
 
-public class Catitem
+namespace StudentApi.CartItem;
+
+public class catitem
 {
+    
     public int Id { get; set; }
 
     public int UserId { get; set; }
-    public User User { get; set; }
+    public user User { get; set; }
 
     public int ProductId { get; set; }
-    public Product Product { get; set; }
+    public product Product { get; set; }
 
     public int Quantity { get; set; }
 }

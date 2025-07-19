@@ -15,14 +15,14 @@ public class AdminProductController : ControllerBase
 
     private bool IsAdmin(string username)
     {
-        return username?.ToLower() == "عرفان";
+        return username?.ToLower() == "erfan";
     }
 
     [HttpPost("{username}")]
-    public async Task<IActionResult> CreateProduct(string username, [FromBody] Product product)
+    public async Task<IActionResult> CreateProduct(string username, [FromBody] product product)
     {
         if (!IsAdmin(username))
-            return Unauthorized("دسترسی ندارید");
+            return Unauthorized("dast rasi ndarid");
 
         _context.Products.Add(product);
         await _context.SaveChangesAsync();
@@ -30,10 +30,10 @@ public class AdminProductController : ControllerBase
     }
 
     [HttpPut("{username}/{id}")]
-    public async Task<IActionResult> UpdateProduct(string username, int id, [FromBody] Product product)
+    public async Task<IActionResult> UpdateProduct(string username, int id, [FromBody] product product)
     {
         if (!IsAdmin(username))
-            return Unauthorized("دسترسی ندارید");
+            return Unauthorized("dast rasi ndarid");
 
         var existing = await _context.Products.FindAsync(id);
         if (existing == null) return NotFound();
@@ -51,7 +51,7 @@ public class AdminProductController : ControllerBase
     public async Task<IActionResult> DeleteProduct(string username, int id)
     {
         if (!IsAdmin(username))
-            return Unauthorized("دسترسی ندارید");
+            return Unauthorized("dast rasi ndarid");
 
         var product = await _context.Products.FindAsync(id);
         if (product == null) return NotFound();
@@ -65,7 +65,7 @@ public class AdminProductController : ControllerBase
     public async Task<IActionResult> GetAllProducts(string username)
     {
         if (!IsAdmin(username))
-            return Unauthorized("دسترسی ندارید");
+            return Unauthorized("dast rasi ndarid");
 
         var products = await _context.Products.Include(p => p.Category).ToListAsync();
         return Ok(products);

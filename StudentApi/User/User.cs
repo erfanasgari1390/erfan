@@ -1,11 +1,13 @@
-﻿namespace StudentApi.User;
+﻿using StudentApi.CartItem;
 
-public class User
+namespace StudentApi.User;
+
+public class user
 {
     public int Id { get; set; }
     public string Username { get; set; }
     public string PasswordHash { get; set; }
 
-    public ICollection<Cartitem> CartItems { get; set; } = new List<Cartitem>();
+    public ICollection<catitem> CartItems { get; set; } = new List<catitem>();
 
 }

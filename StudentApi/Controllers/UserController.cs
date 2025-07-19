@@ -23,7 +23,7 @@ public class UserController : ControllerBase
 
     
     [HttpPost]
-    public async Task<IActionResult> CreateUser([FromBody] User user)
+    public async Task<IActionResult> CreateUser([FromBody] user user)
     {
         _context.Users.Add(user);
         await _context.SaveChangesAsync();
