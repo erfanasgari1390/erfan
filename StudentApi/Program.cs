@@ -36,4 +36,3 @@ builder.Services.AddResponseCaching();
     app.MapControllers();
 
     app.Run();
-}
