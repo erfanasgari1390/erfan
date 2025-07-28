@@ -14,7 +14,13 @@ public class UserController : ControllerBase
         _context = context;
         _cache = cache;
     }
-
+    [HttpPost]
+    public async Task<IActionResult> CreateUser([FromBody] user user)
+    {
+        _context.Users.Add(user);
+        await _context.SaveChangesAsync();
+        return Ok(user);
+    }
     
     [HttpGet("{id}")]
     public async Task<IActionResult> GetUserById(int id)
