@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Caching.Memory;
 using StudentApi.User;
 
 [ApiController]
@@ -8,12 +7,21 @@ using StudentApi.User;
 public class UserController : ControllerBase
 {
     private readonly ApplicationDbContext _context;
-    private readonly IMemoryCache _cache;
-    public UserController(ApplicationDbContext context,IMemoryCache cache)
+
+    public UserController(ApplicationDbContext context)
     {
         _context = context;
-        _cache = cache;
     }
+
+    
+    [HttpGet]
+    public async Task<IActionResult> GetUsers()
+    {
+        var users = await _context.Users.Include(u => u.CartItems).ToListAsync();
+        return Ok(users);
+    }
+
+    // ساخت کاربر جدید
     [HttpPost]
     public async Task<IActionResult> CreateUser([FromBody] user user)
     {
@@ -21,27 +29,19 @@ public class UserController : ControllerBase
         await _context.SaveChangesAsync();
         return Ok(user);
     }
+
     
     [HttpGet("{id}")]
+    [ResponseCache(Duration = 600, Location = ResponseCacheLocation.Client)] 
     public async Task<IActionResult> GetUserById(int id)
     {
-        string cacheKey = $"user-{id}";
+        var user = await _context.Users
+            .Include(u => u.CartItems)
+            .FirstOrDefaultAsync(u => u.Id == id);
 
-        if (!_cache.TryGetValue(cacheKey, out user cachedUser))
-        {
-            cachedUser = await _context.Users
-                .Include(u => u.CartItems)
-                .FirstOrDefaultAsync(u => u.Id == id);
+        if (user == null)
+            return NotFound();
 
-            if (cachedUser == null)
-                return NotFound();
-
-            var cacheOptions = new MemoryCacheEntryOptions()
-                .SetSlidingExpiration(TimeSpan.FromMinutes(10)); 
-
-            _cache.Set(cacheKey, cachedUser, cacheOptions);
-        }
-
-        return Ok(cachedUser);
+        return Ok(user);
     }
 }
