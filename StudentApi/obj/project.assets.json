@@ -1284,6 +1284,26 @@
         "runtime": {
           "bin/placeholder/Domain.dll": {}
         }
+      },
+      "Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Infrastructure.dll": {}
+        }
+      },
+      "Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Services.dll": {}
+        }
       }
     }
   },
@@ -3942,17 +3962,29 @@
       "type": "project",
       "path": "../Domain/Domain.csproj",
       "msbuildProject": "../Domain/Domain.csproj"
+    },
+    "Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../Infrastructure/Infrastructure.csproj",
+      "msbuildProject": "../Infrastructure/Infrastructure.csproj"
+    },
+    "Services/1.0.0": {
+      "type": "project",
+      "path": "../Services/Services.csproj",
+      "msbuildProject": "../Services/Services.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
       "Application >= 1.0.0",
       "Domain >= 1.0.0",
+      "Infrastructure >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 7.0.2",
       "Microsoft.AspNetCore.OpenApi >= 7.0.5",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 9.0.5",
+      "Services >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.4.0",
       "System.IdentityModel.Tokens.Jwt >= 8.12.0"
     ]
@@ -3990,6 +4022,12 @@
             },
             "C:\\folder1\\erfan\\Domain\\Domain.csproj": {
               "projectPath": "C:\\folder1\\erfan\\Domain\\Domain.csproj"
+            },
+            "C:\\folder1\\erfan\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "C:\\folder1\\erfan\\Infrastructure\\Infrastructure.csproj"
+            },
+            "C:\\folder1\\erfan\\Services\\Services.csproj": {
+              "projectPath": "C:\\folder1\\erfan\\Services\\Services.csproj"
             }
           }
         }
