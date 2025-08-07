@@ -4,14 +4,14 @@
     "C:\\folder1\\erfan\\StudentApi\\StudentApi.csproj": {}
   },
   "projects": {
-    "C:\\folder1\\erfan\\Application\\Application.csproj": {
+    "C:\\folder1\\erfan\\Applications\\Applications.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\folder1\\erfan\\Application\\Application.csproj",
-        "projectName": "Application",
-        "projectPath": "C:\\folder1\\erfan\\Application\\Application.csproj",
+        "projectUniqueName": "C:\\folder1\\erfan\\Applications\\Applications.csproj",
+        "projectName": "Applications",
+        "projectPath": "C:\\folder1\\erfan\\Applications\\Applications.csproj",
         "packagesPath": "C:\\Users\\Ali Asgari\\.nuget\\packages\\",
-        "outputPath": "C:\\folder1\\erfan\\Application\\obj\\",
+        "outputPath": "C:\\folder1\\erfan\\Applications\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Ali Asgari\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -29,8 +29,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\folder1\\erfan\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\folder1\\erfan\\Domain\\Domain.csproj"
+              "C:\\folder1\\erfan\\Domains\\Domains.csproj": {
+                "projectPath": "C:\\folder1\\erfan\\Domains\\Domains.csproj"
               }
             }
           }
@@ -64,14 +64,14 @@
         }
       }
     },
-    "C:\\folder1\\erfan\\Domain\\Domain.csproj": {
+    "C:\\folder1\\erfan\\Domains\\Domains.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\folder1\\erfan\\Domain\\Domain.csproj",
-        "projectName": "Domain",
-        "projectPath": "C:\\folder1\\erfan\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\folder1\\erfan\\Domains\\Domains.csproj",
+        "projectName": "Domains",
+        "projectPath": "C:\\folder1\\erfan\\Domains\\Domains.csproj",
         "packagesPath": "C:\\Users\\Ali Asgari\\.nuget\\packages\\",
-        "outputPath": "C:\\folder1\\erfan\\Domain\\obj\\",
+        "outputPath": "C:\\folder1\\erfan\\Domains\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Ali Asgari\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -120,14 +120,14 @@
         }
       }
     },
-    "C:\\folder1\\erfan\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\folder1\\erfan\\Infrastructures\\Infrastructures.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\folder1\\erfan\\Infrastructure\\Infrastructure.csproj",
-        "projectName": "Infrastructure",
-        "projectPath": "C:\\folder1\\erfan\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\folder1\\erfan\\Infrastructures\\Infrastructures.csproj",
+        "projectName": "Infrastructures",
+        "projectPath": "C:\\folder1\\erfan\\Infrastructures\\Infrastructures.csproj",
         "packagesPath": "C:\\Users\\Ali Asgari\\.nuget\\packages\\",
-        "outputPath": "C:\\folder1\\erfan\\Infrastructure\\obj\\",
+        "outputPath": "C:\\folder1\\erfan\\Infrastructures\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Ali Asgari\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -144,7 +144,11 @@
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\folder1\\erfan\\Applications\\Applications.csproj": {
+                "projectPath": "C:\\folder1\\erfan\\Applications\\Applications.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -176,14 +180,14 @@
         }
       }
     },
-    "C:\\folder1\\erfan\\Services\\Services.csproj": {
+    "C:\\folder1\\erfan\\Servicess\\Servicess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\folder1\\erfan\\Services\\Services.csproj",
-        "projectName": "Services",
-        "projectPath": "C:\\folder1\\erfan\\Services\\Services.csproj",
+        "projectUniqueName": "C:\\folder1\\erfan\\Servicess\\Servicess.csproj",
+        "projectName": "Servicess",
+        "projectPath": "C:\\folder1\\erfan\\Servicess\\Servicess.csproj",
         "packagesPath": "C:\\Users\\Ali Asgari\\.nuget\\packages\\",
-        "outputPath": "C:\\folder1\\erfan\\Services\\obj\\",
+        "outputPath": "C:\\folder1\\erfan\\Servicess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Ali Asgari\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -200,7 +204,11 @@
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\folder1\\erfan\\Applications\\Applications.csproj": {
+                "projectPath": "C:\\folder1\\erfan\\Applications\\Applications.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -257,17 +265,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\folder1\\erfan\\Application\\Application.csproj": {
-                "projectPath": "C:\\folder1\\erfan\\Application\\Application.csproj"
+              "C:\\folder1\\erfan\\Infrastructures\\Infrastructures.csproj": {
+                "projectPath": "C:\\folder1\\erfan\\Infrastructures\\Infrastructures.csproj"
               },
-              "C:\\folder1\\erfan\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\folder1\\erfan\\Domain\\Domain.csproj"
-              },
-              "C:\\folder1\\erfan\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "C:\\folder1\\erfan\\Infrastructure\\Infrastructure.csproj"
-              },
-              "C:\\folder1\\erfan\\Services\\Services.csproj": {
-                "projectPath": "C:\\folder1\\erfan\\Services\\Services.csproj"
+              "C:\\folder1\\erfan\\Servicess\\Servicess.csproj": {
+                "projectPath": "C:\\folder1\\erfan\\Servicess\\Servicess.csproj"
               }
             }
           }

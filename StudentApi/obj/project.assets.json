@@ -1262,47 +1262,53 @@
           }
         }
       },
-      "Application/1.0.0": {
+      "Applications/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
-          "Domain": "1.0.0"
+          "Domains": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/Application.dll": {}
+          "bin/placeholder/Applications.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Application.dll": {}
+          "bin/placeholder/Applications.dll": {}
         }
       },
-      "Domain/1.0.0": {
+      "Domains/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "compile": {
-          "bin/placeholder/Domain.dll": {}
+          "bin/placeholder/Domains.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Domain.dll": {}
+          "bin/placeholder/Domains.dll": {}
         }
       },
-      "Infrastructure/1.0.0": {
+      "Infrastructures/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Applications": "1.0.0"
+        },
         "compile": {
-          "bin/placeholder/Infrastructure.dll": {}
+          "bin/placeholder/Infrastructures.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Infrastructure.dll": {}
+          "bin/placeholder/Infrastructures.dll": {}
         }
       },
-      "Services/1.0.0": {
+      "Servicess/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Applications": "1.0.0"
+        },
         "compile": {
-          "bin/placeholder/Services.dll": {}
+          "bin/placeholder/Servicess.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Services.dll": {}
+          "bin/placeholder/Servicess.dll": {}
         }
       }
     }
@@ -3953,38 +3959,36 @@
         "version.txt"
       ]
     },
-    "Application/1.0.0": {
+    "Applications/1.0.0": {
       "type": "project",
-      "path": "../Application/Application.csproj",
-      "msbuildProject": "../Application/Application.csproj"
+      "path": "../Applications/Applications.csproj",
+      "msbuildProject": "../Applications/Applications.csproj"
     },
-    "Domain/1.0.0": {
+    "Domains/1.0.0": {
       "type": "project",
-      "path": "../Domain/Domain.csproj",
-      "msbuildProject": "../Domain/Domain.csproj"
+      "path": "../Domains/Domains.csproj",
+      "msbuildProject": "../Domains/Domains.csproj"
     },
-    "Infrastructure/1.0.0": {
+    "Infrastructures/1.0.0": {
       "type": "project",
-      "path": "../Infrastructure/Infrastructure.csproj",
-      "msbuildProject": "../Infrastructure/Infrastructure.csproj"
+      "path": "../Infrastructures/Infrastructures.csproj",
+      "msbuildProject": "../Infrastructures/Infrastructures.csproj"
     },
-    "Services/1.0.0": {
+    "Servicess/1.0.0": {
       "type": "project",
-      "path": "../Services/Services.csproj",
-      "msbuildProject": "../Services/Services.csproj"
+      "path": "../Servicess/Servicess.csproj",
+      "msbuildProject": "../Servicess/Servicess.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "Application >= 1.0.0",
-      "Domain >= 1.0.0",
-      "Infrastructure >= 1.0.0",
+      "Infrastructures >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 7.0.2",
       "Microsoft.AspNetCore.OpenApi >= 7.0.5",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 9.0.5",
-      "Services >= 1.0.0",
+      "Servicess >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.4.0",
       "System.IdentityModel.Tokens.Jwt >= 8.12.0"
     ]
@@ -4017,17 +4021,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\folder1\\erfan\\Application\\Application.csproj": {
-              "projectPath": "C:\\folder1\\erfan\\Application\\Application.csproj"
+            "C:\\folder1\\erfan\\Infrastructures\\Infrastructures.csproj": {
+              "projectPath": "C:\\folder1\\erfan\\Infrastructures\\Infrastructures.csproj"
             },
-            "C:\\folder1\\erfan\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\folder1\\erfan\\Domain\\Domain.csproj"
-            },
-            "C:\\folder1\\erfan\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "C:\\folder1\\erfan\\Infrastructure\\Infrastructure.csproj"
-            },
-            "C:\\folder1\\erfan\\Services\\Services.csproj": {
-              "projectPath": "C:\\folder1\\erfan\\Services\\Services.csproj"
+            "C:\\folder1\\erfan\\Servicess\\Servicess.csproj": {
+              "projectPath": "C:\\folder1\\erfan\\Servicess\\Servicess.csproj"
             }
           }
         }
