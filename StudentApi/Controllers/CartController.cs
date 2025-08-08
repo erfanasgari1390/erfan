@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using StudentApi.CartItem;
+using YourProject.Infrastructure.Persistence;
 
 [ApiController]
 [Route("api/[controller]")]
@@ -16,7 +16,7 @@ public class CartController : ControllerBase
     [HttpGet("{userId}")]
     public async Task<IActionResult> GetCartItems(int userId)
     {
-        var items = await _context.Cartitems
+        var items = await _context.CartItems
             .Where(ci => ci.UserId == userId)
             .Include(ci => ci.Product)
             .ToListAsync();
@@ -25,9 +25,9 @@ public class CartController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<IActionResult> AddCartItem([FromBody]  catitem item)
+    public async Task<IActionResult> AddCartItem([FromBody]  CartItems item)
     {
-        _context.Cartitems.Add(item);
+        _context.CartItems.Add(item);
         await _context.SaveChangesAsync();
         return Ok(item);
     }

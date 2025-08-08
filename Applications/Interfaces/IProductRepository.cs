@@ -1,4 +1,5 @@
-﻿using StudentApi.Domain.Entities;
+﻿using Domain.Entities;
+using StudentApi.Domain.Entities;
 
 namespace StudentApi.Application.Interfaces.Repositories;
 

@@ -1,4 +1,6 @@
-﻿namespace StudentApi.Domain.Entities;
+﻿using Domain.Entities;
+
+namespace StudentApi.Domain.Entities;
 
 public class Category
 {

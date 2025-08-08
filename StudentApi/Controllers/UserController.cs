@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using StudentApi.User;
+using StudentApi.Domain.Entities;
+using YourProject.Infrastructure.Persistence;
 
 [ApiController]
 [Route("api/[controller]")]
@@ -23,7 +24,7 @@ public class UserController : ControllerBase
 
     // ساخت کاربر جدید
     [HttpPost]
-    public async Task<IActionResult> CreateUser([FromBody] user user)
+    public async Task<IActionResult> CreateUser([FromBody] User user)
     {
         _context.Users.Add(user);
         await _context.SaveChangesAsync();

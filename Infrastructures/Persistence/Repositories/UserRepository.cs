@@ -1,12 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using StudentApi.Application.Interfaces.Repositories;
 using StudentApi.Domain.Entities;
-using YourProject.Application.Interfaces.Repositories;
-using YourProject.Domain.Entities;
+using StudentApi.Application.Interfaces.Repositories;
+using StudentApi.Domain.Entities;
+using YourProject.Infrastructure.Persistence;
 
-namespace YourProject.Infrastructure.Persistence.Repositories
-{
-    public class UserRepository : IUserRepository
+
+public class UserRepository : IUserRepository
     {
         private readonly ApplicationDbContext _context;
         public UserRepository(ApplicationDbContext context)
@@ -42,4 +42,3 @@ namespace YourProject.Infrastructure.Persistence.Repositories
             }
         }
     }
-}

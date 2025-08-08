@@ -1,6 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Domain.Entities;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using StudentApi.Product;
+using YourProject.Infrastructure.Persistence;
 
 [ApiController]
 [Route("api/[controller]")]
@@ -19,7 +20,7 @@ public class AdminProductController : ControllerBase
     }
 
     [HttpPost("{username}")]
-    public async Task<IActionResult> CreateProduct(string username, [FromBody] product product)
+    public async Task<IActionResult> CreateProduct(string username, [FromBody] Product product)
     {
         if (!IsAdmin(username))
             return Unauthorized("dast rasi ndarid");
@@ -30,7 +31,7 @@ public class AdminProductController : ControllerBase
     }
 
     [HttpPut("{username}/{id}")]
-    public async Task<IActionResult> UpdateProduct(string username, int id, [FromBody] product product)
+    public async Task<IActionResult> UpdateProduct(string username, int id, [FromBody] Product product)
     {
         if (!IsAdmin(username))
             return Unauthorized("dast rasi ndarid");

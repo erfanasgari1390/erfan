@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using YourProject.Application.Interfaces.Repositories;
-using YourProject.Domain.Entities;
+using StudentApi.Application.Interfaces.Repositories;
+using StudentApi.Domain.Entities;
+using StudentApi.Application.Interfaces.Repositories;
+using StudentApi.Domain.Entities;
 
 namespace YourProject.Infrastructure.Persistence.Repositories
 {

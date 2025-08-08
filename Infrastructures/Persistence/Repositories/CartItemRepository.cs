@@ -1,6 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using YourProject.Application.Interfaces.Repositories;
-using YourProject.Domain.Entities;
+using StudentApi.Application.Interfaces.Repositories;
+using StudentApi.Domain.Entities;
+using StudentApi.Application.Interfaces.Repositories;
+using StudentApi.Domain.Entities;
+using YourProject.Infrastructure.Persistence;
 
 public class CartItemRepository : ICartItemRepository
 {

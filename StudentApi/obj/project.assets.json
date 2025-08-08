@@ -1289,7 +1289,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
-          "Applications": "1.0.0"
+          "Applications": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "7.0.0"
         },
         "compile": {
           "bin/placeholder/Infrastructures.dll": {}

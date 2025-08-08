@@ -1,6 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Domain.Entities;
+using Microsoft.EntityFrameworkCore;
 using StudentApi.Domain.Entities;
-using YourProject.Domain.Entities;
+
 
 namespace YourProject.Infrastructure.Persistence
 {

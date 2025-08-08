@@ -7,4 +7,5 @@ public interface ICartItemRepository
     Task<IEnumerable<CartItem>> GetByUserIdAsync(int userId);
     Task AddAsync(CartItem item);
     Task SaveChangesAsync();
+    
 }
